@@ -40,7 +40,7 @@ st.markdown("""
 st.markdown("""
 <div class="hero">
   <h1>🏭 Predictive Maintenance Analysis</h1>
-  <p>End-to-end ML pipeline · 10,000 machine readings · AI4I 2020 Dataset · M3 Portfolio · Project 11 of 12</p>
+  <p>End-to-end ML pipeline · 10,000 machine readings · AI4I 2020 Dataset · M3 Portfolio · Project 11 of 13</p>
 </div>""", unsafe_allow_html=True)
 
 c1,c2,c3,c4,c5 = st.columns(5)

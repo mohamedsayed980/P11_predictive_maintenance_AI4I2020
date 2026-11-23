@@ -413,7 +413,8 @@ with tabs[4]:
     }
     for code, (name, cause, action) in root_causes.items():
         count = df[code].sum()
-        st.markdown(f"**{code} — {name}** ({count} cases · {count/10:.2f}%)")
+        #st.markdown(f"**{code} — {name}** ({count} cases · {count/100:.2f}%)")                          # updated old
+        st.markdown(f"**{code} — {name}** ({int(count)} cases · {count/len(df)*100:.2f}% of readings)")  # updated New
         st.markdown(f'<div class="info-box"><p>📍 Root cause: {cause}<br>🔧 Action: {action}</p></div>',
                     unsafe_allow_html=True)
 
@@ -900,4 +901,3 @@ RECOMMENDATIONS:
                  .format({"Avg_Torque":"{:.2f}","Avg_Speed":"{:.0f}",
                           "Avg_Power_kW":"{:.3f}","Failure_Rate%":"{:.2f}%"}),
                  use_container_width=True)
-
